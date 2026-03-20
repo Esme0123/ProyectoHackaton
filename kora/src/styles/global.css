@@ -1,0 +1,51 @@
+/* Importar tipografías de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Caveat:wght@400..700&family=Patrick+Hand&display=swap');
+
+:root {
+  /* Paleta de Colores */
+  --color-primary: #7B5CFA;
+  --color-secondary: #3ED1C6;
+  --color-soft-bg: #A8D5BA;
+  --color-accent: #F7C6D9;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F5F5F5;
+
+  /* Tipografías */
+  --font-title: 'Caveat', cursive;
+  --font-subtitle: 'Averia Gruesa Libre', cursive;
+  --font-text: 'Patrick Hand', cursive;
+}
+
+/* Reseteo básico para que todo encaje perfecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--color-white);
+  color: #333333; /* Un gris oscuro para legibilidad */
+  overflow-x: hidden; /* Evita scroll horizontal accidental */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: #1A1A1A;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-subtitle);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-text);
+  cursor: pointer;
+  border: none;
+}
