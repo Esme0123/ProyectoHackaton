@@ -1,65 +1,66 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-// Asumiendo que tienes un logo de panda pequeño en assets/images/header-logo.png
 import logoImg from '../assets/images/PandaFeliz.png'; 
 
 
 const HeaderContainer = styled.header`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-const TopBand = styled.div`
-  background-color: #E6D9FF; /* Un lavanda suave, basado en el diseño original */
-  height: 40px;
-  width: 100%;
+  position: sticky; /* Se queda arriba al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  background-color: rgba(25FA, 25FA, 25FA, 0.95); /* Fondo base sutilmente transparente */
+  backdrop-filter: blur(10px); /* Efecto cristal profesional */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.03); /* Sombra muy sutil */
 `;
 
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background-color: var(--color-white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sutil sombra para dar profundidad */
+  padding: 15px 5%; /* Padding respirable, edge-to-edge */
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-title); /* Caveat para el logo */
-  font-size: 32px;
+  font-family: var(--font-title); /* Caveat */
+  font-size: 34px;
   color: #1A1A1A;
 `;
 
 const LogoIcon = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
 `;
 
 const NavLinks = styled.ul`
   display: flex;
-  gap: 30px;
+  gap: 35px;
   list-style: none;
-  font-family: var(--font-text); /* Patrick Hand para enlaces */
-  font-size: 18px;
+  font-family: var(--font-text); /* Patrick Hand */
+  font-size: 20px;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled(motion.li)`
   position: relative;
   cursor: pointer;
   a {
-    color: #4D4D4D;
+    color: #333333;
+    padding: 5px 0;
   }
 
-  /* Efecto hover: subrayado suave */
   &::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -3px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -73,42 +74,36 @@ const NavLink = styled(motion.li)`
   }
 `;
 
-const CTAButton = styled(motion.button)`
-  background-color: var(--color-primary);
+const HeaderCTAButton = styled(motion.button)`
+  background: linear-gradient(135deg, var(--color-primary) 0%, #5a3bc7 100%);
   color: var(--color-white);
-  padding: 12px 30px;
+  padding: 12px 28px;
   border-radius: 50px;
-  font-family: var(--font-text); /* Patrick Hand */
+  font-family: var(--font-subtitle); /* Averia para botones premium */
   font-size: 18px;
+  border: none;
 `;
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <TopBand />
       <NavContainer>
         <LogoWrapper>
-          {/* Logo conceptual, usa el tuyo */}
-          <LogoIcon src={logoImg} alt="Kora Panda Logo" />
+          <LogoIcon src={logoImg} alt="Kora Logo" />
           Kora
         </LogoWrapper>
         <NavLinks>
-          <NavLink whileHover={{ scale: 1.05 }}><a href="#inicio">Inicio</a></NavLink>
-          <NavLink whileHover={{ scale: 1.05 }}><a href="#caracteristicas">Características</a></NavLink>
-          <NavLink whileHover={{ scale: 1.05 }}><a href="#temas">Temas</a></NavLink>
-          <NavLink whileHover={{ scale: 1.05 }}><a href="#sobrekora">Sobre Kora</a></NavLink>
+          <NavLink whileHover={{ y: -2 }}><a href="#inicio">Inicio</a></NavLink>
+          <NavLink whileHover={{ y: -2 }}><a href="#caracteristicas">Características</a></NavLink>
+          <NavLink whileHover={{ y: -2 }}><a href="#temas">Temas</a></NavLink>
+          <NavLink whileHover={{ y: -2 }}><a href="#sobrekora">Sobre Kora</a></NavLink>
         </NavLinks>
-        {/* Hover dinámico: se agranda ligeramente y cambia la opacidad */}
-        <CTAButton
-          whileHover={{ 
-            scale: 1.1,
-            boxShadow: "0px 0px 15px rgba(123, 92, 250, 0.5)"
-          }}
+        <HeaderCTAButton
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           Hablar ahora
-        </CTAButton>
+        </HeaderCTAButton>
       </NavContainer>
     </HeaderContainer>
   );

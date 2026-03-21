@@ -14,6 +14,7 @@
   --font-title: 'Caveat', cursive;
   --font-subtitle: 'Averia Gruesa Libre', cursive;
   --font-text: 'Patrick Hand', cursive;
+
 }
 
 /* Reseteo básico para que todo encaje perfecto */
@@ -29,7 +30,13 @@ body {
   color: #333333; /* Un gris oscuro para legibilidad */
   overflow-x: hidden; /* Evita scroll horizontal accidental */
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100% ;
+  overflow-x: hidden; 
+}
 h1, h2, h3 {
   font-family: var(--font-title);
   color: #1A1A1A;
@@ -48,4 +55,7 @@ button {
   font-family: var(--font-text);
   cursor: pointer;
   border: none;
+}
+#root {
+  width: 100%;
 }
