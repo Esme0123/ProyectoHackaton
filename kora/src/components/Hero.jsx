@@ -12,7 +12,7 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #FAFAFA; /* Fondo base ultra limpio */
+  background-color: var(--color-white); /* Fondo blanco para resaltar los colores de las manchas */
   padding: 0; /* Sin padding global para que llegue al borde */
 `;
 
