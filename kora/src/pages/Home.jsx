@@ -1,22 +1,21 @@
 import React from 'react';
-// 
-// import Header from '../components/Header';
-// import Hero from '../components/Hero';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 
 const Home = () => {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <Hero /> */}
+      { <Header /> }
+      { <Hero /> }
       {/* <Features /> */}
       {/* <Topics /> */}
       {/* <Security /> */}
       {/* <About /> */}
       {/* <CTA /> */}
       {/* <Footer /> */}
-      <h1 style={{ textAlign: 'center', marginTop: '50px', color: 'var(--color-primary)' }}>
-        Estructura de Kora Lista 🐼
-      </h1>
+      <div style={{ height: '200px', backgroundColor: 'var(--color-white)', textAlign: 'center', paddingTop: '50px' }}>
+        <h2 style={{ fontFamily: 'var(--font-title)', color: 'var(--color-primary)' }}>Próximo paso: ¿Por qué Kora?</h2>
+      </div>
     </div>
   );
 };
