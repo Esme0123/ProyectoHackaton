@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 // Asumiendo que tienes tu panda grande en assets/images/hero-panda.png
-import pandaHeroImg from '../assets/images/Panda abrazando.png'; 
+import pandaHeroImg from '../assets/images/PandaAbrazando.png'; 
 
 const HeroSection = styled.section`
   display: flex;

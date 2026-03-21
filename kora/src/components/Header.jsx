@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 // Asumiendo que tienes un logo de panda pequeño en assets/images/header-logo.png
-import logoImg from '../assets/images/header-logo.png'; 
+import logoImg from '../assets/images/PandaFeliz.png'; 
+
 
 const HeaderContainer = styled.header`
   display: flex;
