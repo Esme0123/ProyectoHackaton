@@ -218,6 +218,7 @@ const Hero = () => {
 
           <ButtonGroup>
             <PrimaryButton
+              onClick={() => window.chatbase && window.chatbase('open')}
               whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(123, 92, 250, 0.4)" }}
               whileTap={{ scale: 0.95 }}
             >

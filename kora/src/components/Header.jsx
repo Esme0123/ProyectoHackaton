@@ -99,6 +99,7 @@ const Header = () => {
           <NavLink whileHover={{ y: -2 }}><a href="#sobrekora">Sobre Kora</a></NavLink>
         </NavLinks>
         <HeaderCTAButton
+          onClick={() => window.chatbase && window.chatbase('open')}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

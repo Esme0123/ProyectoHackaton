@@ -168,8 +168,8 @@ const Footer = () => {
 
         <LinkCol>
           <ColTitle>Contacto</ColTitle>
-          <FooterLink href="mailto:hola@kora.app">TikTok</FooterLink>
-          <FooterLink href="#ayuda">Instagram</FooterLink>
+          <FooterLink href="#">TikTok</FooterLink>
+          <FooterLink href="https://www.instagram.com/entrenos.contigo?igsh=Zm81YmVzNWRjeGFl">Instagram</FooterLink>
           <FooterLink href="#comunidad">Facebook</FooterLink>
         </LinkCol>
       </FooterGrid>

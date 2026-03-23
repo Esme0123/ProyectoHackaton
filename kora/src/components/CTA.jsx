@@ -72,6 +72,7 @@ const CTA = () => {
           Habla con Kora hoy mismo. Es gratis, privado y está disponible 24/7 para ti.
         </Subtitle>
         <StartButton
+          onClick={() => window.chatbase && window.chatbase('open')}
           whileHover={{ scale: 1.05, boxShadow: "0 15px 40px rgba(62, 209, 198, 0.5)" }}
           whileTap={{ scale: 0.95 }}
         >
