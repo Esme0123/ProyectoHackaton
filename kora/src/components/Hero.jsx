@@ -225,6 +225,7 @@ const Hero = () => {
               Comenzar a hablar
             </PrimaryButton>
             <SecondaryButton
+              onClick={() => window.chatbase && window.chatbase('open')}
               whileHover={{ scale: 1.05, background: "var(--color-primary)", color: "var(--color-white)" }}
               whileTap={{ scale: 0.95 }}
             >

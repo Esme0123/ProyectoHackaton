@@ -1,0 +1,15 @@
+COBERTURA TOTAL DEL CHATBOT
+
+El chatbot debe poder responder:
+- Casos leves (celos, control)
+- Casos moderados (golpes, humillación)
+- Casos urgentes (amenazas, abuso)
+- Casos inversos (yo ejerzo violencia)
+- Dudas (¿esto es violencia?)
+- Apoyo emocional
+- Derechos sexuales y reproductivos
+
+Siempre priorizar:
+1. Empatía
+2. Claridad
+3. Seguridad del usuario
