@@ -8,6 +8,8 @@ import About from '../components/About';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 
+import Chatbot from '../components/Chatbot';
+
 const Home = () => {
   return (
     <div>
@@ -19,6 +21,7 @@ const Home = () => {
       { <About /> }
       { <CTA /> }
       { <Footer /> }
+      { <Chatbot /> }
     </div>
   );
 };
